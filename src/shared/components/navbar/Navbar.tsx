@@ -7,6 +7,8 @@ import useToggleHidden from '../../hooks/ToggleHidden';
 import { ToggleTheme } from '../toggleTheme';
 import { ButtonLogin, LinkMenu, NavbarUser } from './';
 
+import LOGO from '../../../assets/images/logo/MutoCorpLogo2.webp';
+
 export default function Navbar() {
   const { hidden, toggleHidden } = useToggleHidden();
   const [t] = useTranslation('navbar', { keyPrefix: 'navbar' });
@@ -18,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center">
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
+            src={LOGO}
             className="h-8 mr-3"
             alt={AppConstants.ALIAS}
             width={'32px'}

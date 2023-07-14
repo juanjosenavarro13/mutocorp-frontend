@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { useEffect } from 'react';
 import { useUserState } from './context/user';
 import { persistentLogin } from './shared/services';
+import LOGO from './assets/images/logo/MutoCorpLogo1.webp';
 
 export default function App() {
   const { theme } = useGlobalState();
@@ -27,6 +28,7 @@ export default function App() {
       <Helmet>
         <html className={theme} />
         <meta name="description" content="JNP" />
+        <link rel="icon" href={LOGO} />
       </Helmet>
 
       <BrowserRouter>

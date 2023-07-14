@@ -1,3 +1,3 @@
 export const AppConstants = {
-  ALIAS: 'JNP',
+  ALIAS: 'MUTOCORP',
 };
