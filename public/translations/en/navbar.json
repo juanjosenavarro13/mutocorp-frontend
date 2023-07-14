@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "modalLogout": {
+      "title": "Are you sure you want to go out?",
+      "body": "If you confirm, you will be logged out"
+    },
+    "button": {
+      "cancel": "Cancel",
+      "exit": "Go out",
+      "profile": "Profile"
+    },
+    "identify_yourself": "Identify",
+    "open_main_menu": "open menu",
+    "menu": {
+      "home": "Home"
+    }
+  }
+}

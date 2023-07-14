@@ -1,0 +1,10 @@
+{
+  "login": {
+    "loginErrorTitle": "Error al inciar sesión.",
+    "email": "Email",
+    "login": "Iniciar sesión",
+    "password": "Contraseña",
+    "register": "Registrate",
+    "textRegister": "¿Aun no tienes cuenta? entra ya y"
+  }
+}

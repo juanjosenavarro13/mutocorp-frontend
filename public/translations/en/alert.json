@@ -1,0 +1,14 @@
+{
+  "alert": {
+    "User already exists": "User already exists",
+    "Passwords do not match": "Passwords do not match",
+    "email must be an email": "The email must be an email",
+    "name should not be empty": "The name cannot be empty",
+    "email should not be empty": "The email cannot be empty",
+    "password should not be empty": "Password cannot be empty",
+    "password_confirmation should not be empty": "Password confirmation cannot be empty",
+    "timeout": "Timeout",
+    "unknown error": "unknown error",
+    "Access Denied": "Access denied"
+  }
+}

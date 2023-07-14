@@ -1,0 +1,10 @@
+{
+  "register": {
+    "name": "Nombre",
+    "email": "Email",
+    "password": "Contraseña",
+    "passwordConfirmation": "Confirmar contraseña",
+    "register": "Registrarse",
+    "registerErrorTitle": "Errores en el registro"
+  }
+}

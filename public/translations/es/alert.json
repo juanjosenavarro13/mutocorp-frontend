@@ -1,0 +1,14 @@
+{
+  "alert": {
+    "User already exists": "El usuario ya existe",
+    "Passwords do not match": "Las contraseñas no coinciden",
+    "email must be an email": "El email debe ser un email",
+    "name should not be empty": "El nombre no puede estar vacío",
+    "email should not be empty": "El email no puede estar vacío",
+    "password should not be empty": "La contraseña no puede estar vacía",
+    "password_confirmation should not be empty": "La confirmación de la contraseña no puede estar vacía",
+    "timeout": "Tiempo de espera agotado",
+    "unknown error": "Error desconocido",
+    "Access Denied": "Acceso denegado"
+  }
+}

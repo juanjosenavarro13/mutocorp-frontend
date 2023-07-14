@@ -1,0 +1,10 @@
+{
+  "login": {
+    "loginErrorTitle": "Failed to login.",
+    "email": "E-mail",
+    "login": "Log in",
+    "password": "Password",
+    "register": "Sign up",
+    "textRegister": "Don't have an account yet? \ncome in now and"
+  }
+}

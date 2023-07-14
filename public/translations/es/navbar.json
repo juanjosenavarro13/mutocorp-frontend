@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "modalLogout": {
+      "title": "¿Estas seguro que quiere salir?",
+      "body": "Si confirma, se cerrará la sesión"
+    },
+    "button": {
+      "cancel": "Cancelar",
+      "exit": "Salir",
+      "profile": "Perfil"
+    },
+    "identify_yourself": "Identificarse",
+    "open_main_menu": "Abrir menu",
+    "menu": {
+      "home": "Inicio"
+    }
+  }
+}
