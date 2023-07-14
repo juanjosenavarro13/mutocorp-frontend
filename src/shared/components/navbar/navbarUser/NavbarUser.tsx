@@ -41,6 +41,7 @@ export default function NavbarUser() {
                 LocalStorageService.Instance.delete('token');
                 setShowModal(false);
                 userContext.setUser({
+                  id: '',
                   name: '',
                   email: '',
                   created_at: new Date(),
