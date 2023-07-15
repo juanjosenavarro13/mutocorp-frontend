@@ -12,7 +12,7 @@ export function http_Login(loginForm: LoginForm): Promise<User> {
   return Axios.post('auth/login', loginForm)
     .then((res) => {
       LocalStorageService.Instance.save('token', res.data);
-      return getProfile(res.data.access_token);
+      return getProfileAuth(res.data.access_token);
     })
     .catch((error) => {
       if (error.message.includes('timeout')) {
@@ -35,7 +35,7 @@ export function http_Register(registerForm: RegisterForm): Promise<User> {
   return Axios.post('auth/register', registerForm)
     .then((res) => {
       LocalStorageService.Instance.save('token', res.data);
-      return getProfile(res.data.access_token);
+      return getProfileAuth(res.data.access_token);
     })
     .catch((error) => {
       if (error.message.includes('timeout')) {
@@ -63,7 +63,7 @@ export function http_Logout(): Promise<boolean> {
   );
 }
 
-export function getProfile(token: string): Promise<User> {
+export function getProfileAuth(token: string): Promise<User> {
   return Axios.get('users/profile', {
     headers: {
       Authorization: `Bearer ${token}`,

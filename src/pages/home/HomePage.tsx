@@ -1,27 +1,37 @@
 import { useTranslation } from 'react-i18next';
-import { Table } from '../../shared/components';
+import { Spinner, Table } from '../../shared/components';
+import { getRaiders } from '../../api';
+import { useEffect, useState } from 'react';
+import { Raider, TableRaiders } from '../../api/home/raiders.model';
 
 export default function HomePage() {
   const [t] = useTranslation('home', { keyPrefix: 'home' });
+  const [loading, setLoading] = useState(true);
+  const [raiders, setRaiders] = useState<TableRaiders[]>([]);
 
-  const datos = [
-    {
-      Name: 'fjuanxo',
-      Hikoins: '100',
-    },
-    {
-      Name: 'bmutombo',
-      Hikoins: '200',
-    },
-    {
-      Name: 'cgato',
-      Hikoins: '50',
-    },
-    {
-      Name: 'djewel',
-      Hikoins: '50',
-    },
-  ];
+  const transformData = (raiders: Raider[]) => {
+    return raiders.map((raider) => {
+      return {
+        Name: raider.name,
+        Hikoins: raider.hikoins.toString(),
+      };
+    });
+  };
 
-  return <Table colums={[t('tableName'), 'Hikoins']} data={datos} />;
+  useEffect(() => {
+    getRaiders().then((res) => {
+      setLoading(false);
+      setRaiders(transformData(res));
+    });
+  }, [loading]);
+
+  return (
+    <>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <Table colums={[t('tableName'), 'Hikoins']} data={raiders} />
+      )}
+    </>
+  );
 }
