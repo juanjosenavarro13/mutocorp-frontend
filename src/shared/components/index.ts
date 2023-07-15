@@ -1,11 +1,15 @@
-export { default as Alert } from './alert/Alert';
+export * from './alert';
 export * from './button';
 export * from './changeLanguage';
 export * from './footer';
-export * from './index';
 export * from './input';
 export * from './login';
+export * from './modal';
+export * from './navbar/buttonLogin';
 export * from './navbar';
+export * from './navbar/linkMenu';
+export * from './navbar/navbarUser';
 export * from './register';
 export * from './spinner';
+export * from './table';
 export * from './toggleTheme';
