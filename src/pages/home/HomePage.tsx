@@ -23,7 +23,7 @@ export default function HomePage() {
       setLoading(false);
       setRaiders(transformData(res));
     });
-  }, [loading]);
+  }, []);
 
   return (
     <>
