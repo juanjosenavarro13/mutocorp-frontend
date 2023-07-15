@@ -68,7 +68,7 @@ export default function Table(props: Props) {
 
     changeOrder(key);
 
-    if (order[index].order === 'asc') {
+    if (order[index].order === 'desc') {
       newData.sort((x, y) => x[key].localeCompare(y[key]));
       newData.sort((x, y) => y[key] - x[key]);
     } else {
