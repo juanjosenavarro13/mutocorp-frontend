@@ -8,7 +8,9 @@ const token: TokenSave | null = LocalStorageService.Instance.get('token');
 const headers = {
   'Content-Type': 'application/json;charset=UTF-8',
   'Access-Control-Allow-Origin': '*',
-  Authorization: token?.access_token ? `Bearer ${token.access_token}` : '',
+  Authorization: token?.access_token
+    ? `Bearer ${token.access_token}`
+    : 'NO TOKEN',
 };
 
 const Axios = axios.create({
@@ -32,12 +34,14 @@ Axios.interceptors.response.use(
     ) {
       return refreshToken(token?.refresh_token ?? 'NO TOKEN')
         .then((tokens) => {
+          if (!tokens) {
+            return Promise.reject(error);
+          }
           LocalStorageService.Instance.save('token', tokens);
           return Promise.resolve(tokens);
         })
         .catch(() => {
           LocalStorageService.Instance.delete('token');
-          window.location.reload();
         })
         .finally(() => {
           window.location.reload();

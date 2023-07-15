@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Spinner, Table } from '../../shared/components';
 import { getRaiders } from '../../api';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Raider, TableRaiders } from '../../api/home/raiders.model';
 
 export default function HomePage() {
@@ -26,12 +26,12 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
+    <Suspense fallback={<Spinner />}>
       {loading ? (
         <Spinner />
       ) : (
         <Table colums={[t('tableName'), 'Hikoins']} data={raiders} />
       )}
-    </>
+    </Suspense>
   );
 }

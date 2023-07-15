@@ -10,7 +10,7 @@ export function getProfile() {
         return Promise.reject('timeout');
       }
 
-      if (error.response.status === 400) {
+      if (error.response?.status === 400) {
         return Promise.reject(error.response.data.message);
       }
 
