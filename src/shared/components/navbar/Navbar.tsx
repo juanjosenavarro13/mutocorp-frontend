@@ -11,7 +11,10 @@ import LOGO from '../../../assets/images/logo/MutoCorpLogo2.webp';
 
 export default function Navbar() {
   const { hidden, toggleHidden } = useToggleHidden();
-  const [t] = useTranslation('navbar', { keyPrefix: 'navbar' });
+  const [t] = useTranslation('navbar', {
+    keyPrefix: 'navbar',
+    useSuspense: true,
+  });
 
   const userContext = useContext(UserStateContext);
 
