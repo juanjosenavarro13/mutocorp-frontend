@@ -14,8 +14,8 @@ export default function ProfilePage() {
     name: '',
     email: '',
     role: '',
-    created_at: '',
-    updated_at: '',
+    createdAt: '',
+    updatedAt: '',
   });
 
   const [errors, setErrors] = useState<string[] | string>('');
@@ -36,7 +36,7 @@ export default function ProfilePage() {
       };
 
       updateProfile(dateUpdate).then(() => {
-        setProfile({ ...profile, updated_at: new Date().toISOString() });
+        setProfile({ ...profile, updatedAt: new Date().toISOString() });
         setSuccess('Profile updated successfully');
         setErrors('');
       });
@@ -94,13 +94,13 @@ export default function ProfilePage() {
                 <label className="block text-sm font-medium text-gray-700">
                   {t('updated')}
                 </label>
-                <p>{formatDate(profile.updated_at)}</p>
+                <p>{formatDate(profile.updatedAt)}</p>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700">
                   {t('created')}
                 </label>
-                <p>{formatDate(profile.created_at)}</p>
+                <p>{formatDate(profile.createdAt)}</p>
               </div>
             </div>
             <Button label={t('save')} onClick={handleUpdate} type="button" />

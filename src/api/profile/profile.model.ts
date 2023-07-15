@@ -2,8 +2,8 @@ export interface Profile {
   id: string;
   name: string;
   email: string;
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
   refreshToken: string;
   role: string;
 }

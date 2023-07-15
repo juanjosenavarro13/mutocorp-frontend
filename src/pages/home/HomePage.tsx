@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { Table } from '../../shared/components';
 
 export default function HomePage() {
+  const [t] = useTranslation('home', { keyPrefix: 'home' });
+
   const datos = [
     {
       Name: 'fjuanxo',
@@ -20,5 +23,5 @@ export default function HomePage() {
     },
   ];
 
-  return <Table colums={Object.keys(datos[0])} data={datos} />;
+  return <Table colums={[t('tableName'), 'Hikoins']} data={datos} />;
 }

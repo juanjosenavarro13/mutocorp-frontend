@@ -4,7 +4,7 @@ export const formatDate = (date: string) => {
   const month = dateObj.getMonth() + 1;
   const year = dateObj.getFullYear();
   const hours = dateObj.getHours();
-  const minutes = dateObj.getMinutes();
+  const minutes = (dateObj.getMinutes() < 10 ? '0' : '') + dateObj.getMinutes();
 
   return `${day}/${month}/${year} ${hours}:${minutes}`;
 };
