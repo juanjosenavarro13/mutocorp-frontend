@@ -1,11 +1,11 @@
 import { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button, ButtonsFooterModal } from '../..';
 import { http_Logout } from '../../../../api';
 import { UserStateContext } from '../../../../context/user';
-import Modal from '../../modal/Modal';
-import { useTranslation } from 'react-i18next';
 import { LocalStorageService } from '../../../services';
+import Modal from '../../modal/Modal';
 
 export default function NavbarUser() {
   const [showModal, setShowModal] = useState(false);

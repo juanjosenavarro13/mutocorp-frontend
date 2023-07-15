@@ -6,8 +6,9 @@ import { AppConstants } from '../../constants/';
 import useToggleHidden from '../../hooks/ToggleHidden';
 import { ToggleTheme } from '../toggleTheme';
 import { ButtonLogin, LinkMenu, NavbarUser } from './';
-
-import LOGO from '../../../assets/images/logo/MutoCorpLogo2.webp';
+import style from './Navbar.module.css';
+import LOGO from '../../../assets/images/logo/MutoCorpLogo1.webp';
+import { useGlobalState } from '../../../context/global';
 
 export default function Navbar() {
   const { hidden, toggleHidden } = useToggleHidden();
@@ -15,6 +16,9 @@ export default function Navbar() {
     keyPrefix: 'navbar',
     useSuspense: true,
   });
+  const { theme } = useGlobalState();
+
+  const logoStyle = theme === 'dark' ? style.logoDark : '';
 
   const userContext = useContext(UserStateContext);
 
@@ -24,7 +28,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center">
           <img
             src={LOGO}
-            className="h-8 mr-3"
+            className={`h-8 mr-3 ${logoStyle}`}
             alt={AppConstants.ALIAS}
             width={'32px'}
             height={'32px'}
@@ -72,7 +76,7 @@ export default function Navbar() {
             <LinkMenu to="/" label={t('menu.home')} />
 
             <div className="md:hidden mt-3">
-              {userContext.user ? <NavbarUser /> : <ButtonLogin />}
+              {userContext.user.auth ? <NavbarUser /> : <ButtonLogin />}
             </div>
           </ul>
         </div>
