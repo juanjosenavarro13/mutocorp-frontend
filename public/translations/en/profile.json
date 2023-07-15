@@ -1,0 +1,10 @@
+{
+  "profile": {
+    "name": "Name",
+    "email": "e-mail",
+    "role": "Category",
+    "updated": "Last update",
+    "created": "Created",
+    "save": "Save"
+  }
+}

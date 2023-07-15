@@ -1,5 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import { useUserState } from '../../../context/user';
+import { Suspense } from 'react';
+import { Spinner } from '../../components';
 
 type Props = {
   children: React.ReactElement;
@@ -19,5 +21,5 @@ export default function AuthGuard(props: Props) {
     return <Navigate to="/" />;
   }
 
-  return children;
+  return <Suspense fallback={<Spinner />}>{children}</Suspense>;
 }

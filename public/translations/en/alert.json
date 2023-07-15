@@ -9,6 +9,8 @@
     "password_confirmation should not be empty": "Password confirmation cannot be empty",
     "timeout": "Timeout",
     "unknown error": "unknown error",
-    "Access Denied": "Access denied"
+    "Access Denied": "Access denied",
+    "Name and Email are required": "Name and Email are required",
+    "Profile updated successfully": "Profile updated successfully"
   }
 }

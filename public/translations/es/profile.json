@@ -1,0 +1,10 @@
+{
+  "profile": {
+    "name": "Nombre",
+    "email": "email",
+    "role": "Categoría",
+    "updated": "Ultima actualización",
+    "created": "Creado",
+    "save": "Guardar"
+  }
+}

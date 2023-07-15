@@ -9,6 +9,8 @@
     "password_confirmation should not be empty": "La confirmación de la contraseña no puede estar vacía",
     "timeout": "Tiempo de espera agotado",
     "unknown error": "Error desconocido",
-    "Access Denied": "Acceso denegado"
+    "Access Denied": "Acceso denegado",
+    "Name and Email are required": "Nombre y email requeridos.",
+    "Profile updated successfully": "Perfil actualizado correctamente"
   }
 }
