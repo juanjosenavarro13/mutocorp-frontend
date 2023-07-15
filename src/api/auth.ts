@@ -52,7 +52,6 @@ export function http_Register(registerForm: RegisterForm): Promise<User> {
 
 export function http_Logout(): Promise<boolean> {
   const token: TokenSave | null = LocalStorageService.Instance.get('token');
-  console.log(token);
   return Axios.post(
     'auth/logout',
     {},

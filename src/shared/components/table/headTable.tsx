@@ -1,6 +1,11 @@
 type Props = {
-  colums: string[];
+  colums: Colums[];
   orderBy: (key: string) => void;
+};
+
+type Colums = {
+  id: string;
+  name: string;
 };
 
 export default function HeadTable(props: Props) {
@@ -9,15 +14,15 @@ export default function HeadTable(props: Props) {
   return (
     <>
       {colums.map((colum) => (
-        <th scope="col" className="px-6 py-3" key={colum}>
+        <th scope="col" className="px-6 py-3" key={colum.id}>
           <a
             className="flex items-center"
             role="button"
             onClick={() => {
-              orderBy(colum);
+              orderBy(colum.id);
             }}
           >
-            {colum}
+            {colum.name}
             <svg
               className="w-3 h-3 ml-1.5"
               aria-hidden="true"

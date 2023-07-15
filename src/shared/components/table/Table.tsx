@@ -9,7 +9,15 @@ type Props = {
 };
 
 export default function Table(props: Props) {
-  const { colums } = props;
+  const idsColums = Object.keys(props.data[0]);
+
+  const colums = props.colums.map((col, index) => {
+    return {
+      id: idsColums[index],
+      name: col,
+    };
+  });
+
   const [data, setData] = useState(props.data);
 
   const initialOrder = () => {
