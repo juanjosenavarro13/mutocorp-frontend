@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { User, getAllUsers } from '../../../api/admin/getAllUsers';
 import { Spinner } from '../../../shared/components';
@@ -12,16 +12,18 @@ export default function UserList(props: Props) {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  const fetchUsers = async () => {
-    const users = await getAllUsers();
-    setUsers(users);
-    props.getUsers(users);
-  };
+  const { getUsers } = props;
+
+  const fetchUsers = useCallback(async () => {
+    const allUsers = await getAllUsers();
+    setUsers(allUsers);
+    getUsers(allUsers);
+  }, [getUsers]);
 
   useEffect(() => {
     setLoading(true);
     fetchUsers().then(() => setLoading(false));
-  }, []);
+  }, [fetchUsers]);
 
   return (
     <>
