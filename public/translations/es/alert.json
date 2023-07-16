@@ -11,6 +11,8 @@
     "unknown error": "Error desconocido",
     "Access Denied": "Acceso denegado",
     "Name and Email are required": "Nombre y email requeridos.",
-    "Profile updated successfully": "Perfil actualizado correctamente"
+    "Profile updated successfully": "Perfil actualizado correctamente",
+    "user should not be empty": "El usuario no puede estar vacío",
+    "Raider already exists or user already has a raider": "El raider ya existe o el usuario ya tiene un raider"
   }
 }

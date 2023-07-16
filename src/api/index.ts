@@ -1,3 +1,4 @@
+export * from './admin';
 export * from './auth';
 export { default as axios } from './axios';
 export * from './home';

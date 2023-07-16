@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from 'react';
 
 type InputProps = {
   type: 'text' | 'number' | 'email' | 'password';
-  initialValue: string;
+  initialValue: string | number;
   label: string;
   name?: string;
   placeholder?: string;

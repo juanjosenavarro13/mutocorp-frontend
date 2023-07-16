@@ -11,6 +11,8 @@
     "unknown error": "unknown error",
     "Access Denied": "Access denied",
     "Name and Email are required": "Name and Email are required",
-    "Profile updated successfully": "Profile updated successfully"
+    "Profile updated successfully": "Profile updated successfully",
+    "user should not be empty": "User cannot be empty",
+    "Raider already exists or user already has a raider": "Raider already exists or user already has a raider"
   }
 }
