@@ -6,8 +6,9 @@ import {
   LoginPage,
   ProfilePage,
   RegisterPage,
+  AdminPage,
 } from '.';
-import { AuthGuard } from '../shared/guards';
+import { AdminGuard, AuthGuard } from '../shared/guards';
 
 export default function Router() {
   return (
@@ -36,6 +37,14 @@ export default function Router() {
             <AuthGuard>
               <ProfilePage />
             </AuthGuard>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <AdminGuard>
+              <AdminPage />
+            </AdminGuard>
           }
         />
         <Route path="*" element={<ErrorPage />} />

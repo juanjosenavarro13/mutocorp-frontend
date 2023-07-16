@@ -1,6 +1,6 @@
+export * from './admin';
 export * from './error';
 export * from './home';
-export * from './index';
 export * from './layout';
 export * from './login';
 export * from './profile';
